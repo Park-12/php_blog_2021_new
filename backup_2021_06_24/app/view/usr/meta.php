@@ -3,7 +3,7 @@ if ( !isset($meta) ) {
   $meta = [];
 }
 
-$meta['siteName'] = "SH BLOG";
+$meta['siteName'] = "BBB BLOG";
 $meta['siteCanonicalUrl'] = $_SERVER['REQUEST_URI'];
 $meta['siteKeywords'] = "IT, Java, PHP, HTML, CSS, Javascript, MySQL, Linux";
 
@@ -12,15 +12,11 @@ if ( !isset($meta['pageGenDate']) ) {
 }
 
 if ( !isset($meta['siteSubject']) ) {
-  $meta['siteSubject'] = "IT 전문 블로그 플랫폼, SH BLOG";
+  $meta['siteSubject'] = "IT 전문 블로그 플랫폼, BBB BLOG";
 }
 
 if ( !isset($meta['siteDescription']) ) {
-  $meta['siteDescription'] = "IT 전문 블로그 플랫폼, SH BLOG 입니다. 누구나 멋진 나만의 IT 블로그를 만들 수 있습니다.";
-}
-
-if ( !isset($meta['og:title']) ) {
-  $meta['og:title'] = $meta['siteSubject'];
+  $meta['siteDescription'] = "IT 전문 블로그 플랫폼, BBB BLOG 입니다. 누구나 멋진 나만의 IT 블로그를 만들 수 있습니다.";
 }
 
 $meta['siteDomain'] = $prodSiteDomain;
@@ -41,7 +37,7 @@ $meta['siteMetaImgUrl'] = "/resource/img/logo/logo_meta.png";
 <!-- OPENGRAPH -->
 <meta property="og:site_name" content="<?=$meta['siteName']?>" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="<?=$meta['og:title']?>" />
+<meta property="og:title" content="<?=$meta['siteSubject']?>" />
 <meta property="og:description" content="<?=$meta['siteDescription']?>" />
 <meta property="og:locale" content="ko_KR" />
 <meta property="og:image" content="<?=$meta['siteMainUrl']?><?=$meta['siteMetaImgUrl']?>" />

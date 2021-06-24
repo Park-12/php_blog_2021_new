@@ -36,27 +36,21 @@ $loginedMember = $_REQUEST['App__loginedMember'];
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-94LNZ8CK0K"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
-
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-
+            function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
-            gtag('config', 'G-94LNZ8CK0K');
+            gtag('config', 'G-ZNXX3J5N1S');
         </script>
-    <?php } ?>
+        <?php } ?>
 
-    <?php require_once "meta.php"; ?>
-
+        <?php require_once "meta.php"; ?>
 </head>
 <body>
 <div class="site-wrap min-h-screen flex flex-col pt-10">
-    <header class="top-bar fixed top-0 inset-x-0 bg-black text-white h-10">
+    <header class="top-bar fixed top-0 inset-x-0 text-white h-10">
         <div class="container mx-auto h-full flex">
             <a href="/" class="top-bar__logo px-5 flex items-center">
-                <span><i class="fas fa-lemon"></i></span>
-                <span class="ml-2 font-bold hidden sm:inline">LEMON BLOG</span>
+                <span><i class="fas fa-apple-alt"></i></span>
+                <span class="ml-2 font-bold hidden sm:inline">SH BLOG</span>
             </a>
 
             <div class="flex-grow"></div>
