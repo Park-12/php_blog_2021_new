@@ -1,10 +1,10 @@
 <?php
+$utterancPageIdentifier = "/usr/article/detail?id={$article['id']}";
+
 $meta = [];
 $updateDateBits = explode(" ", $article['updateDate']);
 $meta['pageGenDate'] = $updateDateBits[0] . 'T' . $updateDateBits[1] . 'Z';
 $meta['siteSubject'] = str_replace('"', '＂', $article['title']);
-$utterancPageIdentifier = "/usr/article/detail?id={$article['id']}";
-$meta['og:title'] = $utterancPageIdentifier;
 $meta['siteDescription'] = str_replace('"', '＂', mb_substr($article['body'], 0, 100));
 $meta['siteDescription'] = str_replace("\n", "", $meta['siteDescription']);
 $pageTitleIcon = '<i class="fas fa-newspaper"></i>';
@@ -48,7 +48,7 @@ $body = ToastUiEditor__getSafeSource($article['body']);
       </style>
       <script src="https://utteranc.es/client.js"
         repo="Park-12/php_blog_2021_new__comment"
-        issue-term="og:title"
+        issue-term="<?=$utterancPageIdentifier?>"
         theme="github-light"
         crossorigin="anonymous"
         async>
