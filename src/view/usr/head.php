@@ -3,7 +3,7 @@ if (isset($pageTitle) == false) {
     $pageTitle = "";
 }
 
-$application = $this->getApplication();
+$application = $this->application();
 $envCode = $application->getEnvCode();
 $prodSiteDomain = $application->getProdSiteDomain();
 $isLogined = $_REQUEST['App__isLogined'];
@@ -36,13 +36,19 @@ $loginedMember = $_REQUEST['App__loginedMember'];
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-94LNZ8CK0K"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-ZNXX3J5N1S');
-        </script>
-        <?php } ?>
 
-        <?php require_once "meta.php"; ?>
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+
+            gtag('config', 'G-94LNZ8CK0K');
+        </script>
+    <?php } ?>
+
+    <?php require_once "meta.php"; ?>
+
 </head>
 <body>
 <div class="site-wrap min-h-screen flex flex-col pt-10">

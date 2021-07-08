@@ -1,6 +1,4 @@
 <?php
-$utterancPageIdentifier = "/usr/article/detail?id={$article['id']}";
-
 $meta = [];
 $updateDateBits = explode(" ", $article['updateDate']);
 $meta['pageGenDate'] = $updateDateBits[0] . 'T' . $updateDateBits[1] . 'Z';
@@ -11,6 +9,8 @@ $pageTitleIcon = '<i class="fas fa-newspaper"></i>';
 $pageTitle = "게시물 상세내용, ${id}번 게시물";
 
 $body = ToastUiEditor__getSafeSource($article['body']);
+
+$utterancPageIdentifier = "/usr/article/detail?id={$article['id']}";
 ?>
 <?php require_once __DIR__ . "/../head.php"; ?>
 <?php require_once __DIR__ . "/../../part/toastUiSetup.php"; ?>
@@ -39,15 +39,13 @@ $body = ToastUiEditor__getSafeSource($article['body']);
 <section class="section-disqus">
   <div class="container mx-auto">
     <div class="con-pad">
-      <div id="disqus_thread"></div>
-      
       <style>
       .utterances {
         max-width: 100%;
       }
       </style>
       <script src="https://utteranc.es/client.js"
-        repo="Park-12/php_blog_2021_new__comment"
+        repo="jhs512/bbb_oa_gg_comment"
         issue-term="<?=$utterancPageIdentifier?>"
         theme="github-light"
         crossorigin="anonymous"

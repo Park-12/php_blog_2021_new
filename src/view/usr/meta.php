@@ -3,7 +3,7 @@ if ( !isset($meta) ) {
   $meta = [];
 }
 
-$meta['siteName'] = "SH BLOG";
+$meta['siteName'] = "BBB BLOG";
 $meta['siteCanonicalUrl'] = $_SERVER['REQUEST_URI'];
 $meta['siteKeywords'] = "IT, Java, PHP, HTML, CSS, Javascript, MySQL, Linux";
 
